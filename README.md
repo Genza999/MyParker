@@ -3,7 +3,7 @@ This is a sample-test android project based in Kampala,Uganda that helps users t
 
 # Prerequisite
 - Android studio
-- A testing device i.e. phone
+- A testing device i.e. phone with api not less than 19
 - Internet connection
 
 # Testing Usage
