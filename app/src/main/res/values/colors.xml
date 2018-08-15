@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#000</color>
+    <color name="colorPrimaryDark">#000</color>
+    <color name="colorPrimaryDarkCustom">#011333</color>
+    <color name="colorPrimaryDarkCustomFaint">#74011333</color>
+    <color name="colorPrimaryDarkCustomFaintActivityView">#36c9d0db</color>
+    <color name="colorPrimaryDarkCustomSplashScreen">#00081b</color>
+    <color name="colorAccent">#ffffff</color>
+    <color name="colorAccentCustom">#00c3ff</color>
+    <color name="colorAccentFade">#9cbbc3</color>
+    <color name="hintColor">#01457c</color>
+</resources>

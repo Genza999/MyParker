@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".LotOwner">
+
+    <com.example.david.myparker.MapWrapperLayout
+        android:id="@+id/map_relative_layout1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity" />
+    </com.example.david.myparker.MapWrapperLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp">
+
+            <TextView
+                android:id="@+id/lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="15dp"
+                android:padding="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/round_white_fill"
+                android:textColor="@color/colorPrimaryDarkCustom"
+                android:textSize="14sp"
+                android:text="@string/latitude"
+                android:fontFamily="@font/product_sans"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/lon"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="15dp"
+                android:padding="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/round_white_fill"
+                android:textColor="@color/colorPrimaryDarkCustom"
+                android:textSize="14sp"
+                android:text="@string/longitude"
+                android:fontFamily="@font/product_sans"
+                android:visibility="invisible"/>
+            <TextView
+                android:id="@+id/address"
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:layout_marginStart="15dp"
+                android:padding="4dp"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:background="@drawable/round_white_fill"
+                android:textColor="@color/colorPrimaryDarkCustom"
+                android:textSize="14sp"
+                android:text="@string/address"
+                android:fontFamily="@font/product_sans"
+                android:visibility="invisible"/>
+
+            <ImageView
+                android:layout_marginTop="45dp"
+                android:layout_gravity="center"
+                android:id="@+id/imageMarker1"
+                android:layout_width="30dp"
+                android:layout_height="90dp"
+                android:src="@drawable/map_marker_custom"
+                android:visibility="invisible"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/addparklot1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/round_corner_white_fill"
+                android:orientation="vertical"
+                android:visibility="invisible">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingTop="10dp"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/colorPrimaryDarkCustom"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/product_sans"
+                    android:text="@string/click_and_zoom"/>
+                <View
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#2000"/>
+                <RelativeLayout
+                    android:layout_gravity="bottom"
+                    android:id="@+id/addparklot2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="7dp"
+                    android:paddingEnd="7dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:orientation="horizontal">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/submit1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_offline_pin_black_24dp" />
+                        <TextView
+                            android:id="@+id/submitLot1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Submit"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/product_sans"
+                            android:textColor="@color/colorPrimaryDarkCustom" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <Button
+                            android:id="@+id/cancel1"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:background="@drawable/ic_cancel_black_24dp" />
+                        <TextView
+                            android:id="@+id/cancelLot1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" Cancel"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/product_sans"
+                            android:textColor="@color/colorPrimaryDarkCustom" />
+                    </LinearLayout>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp"
+                android:layout_marginBottom="0dp"
+                android:background="@drawable/round_corner_black_fill_bottom_bar">
+                <TextView
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_location_notification"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/product_sans"/>
+                <TextView
+                    android:layout_marginTop="2dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_more_options"
+                    android:textColor="@color/colorAccentCustom"
+                    android:textSize="14sp"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/product_sans"/>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
+

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <include layout="@layout/content_main" />
+
+    <ImageView
+        android:id="@+id/navigation_drawer_button"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        app:srcCompat="@drawable/nav_drawer_custom_button_half"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="bottom|end"
+        android:orientation="vertical">
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/parking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/car_location_icon"
+            app:fabSize="mini"
+            app:pressedTranslationZ="12dp"
+            android:visibility="visible"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/walk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/walk_to_custom"
+            app:fabSize="mini"
+            app:pressedTranslationZ="12dp"
+            android:visibility="visible"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/satelliteView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/ic_satellite_black_24dp"
+            app:fabSize="mini"
+            app:pressedTranslationZ="12dp"
+            android:visibility="visible"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            app:srcCompat="@drawable/arrow_facing_up_dark"
+            android:visibility="gone"
+            app:pressedTranslationZ="12dp"
+            app:fabSize="mini"/>
+        <android.support.design.widget.FloatingActionButton
+            android:id="@+id/findparkspot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="35dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/navigate_to_2"
+            app:fabSize="normal"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginBottom="200dp"
+        android:visibility="gone">
+        <ImageView
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/open_me_image"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="30dp"
+            android:layout_height="20dp"
+            android:src="@drawable/arrow_facing_down_dark"/>
+    </RelativeLayout>
+    <include layout="@layout/bottom_sheet" />
+
+</android.support.design.widget.CoordinatorLayout>
